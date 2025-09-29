@@ -1,20 +1,28 @@
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container
-builder.Services.AddEndpointsApiExplorer(); // necessário para minimal APIs
-builder.Services.AddSwaggerGen();           // adiciona Swagger UI
+// Adiciona serviços
+builder.Services.AddControllers();            // registra controllers
+builder.Services.AddEndpointsApiExplorer();   // necessário para minimal APIs
+builder.Services.AddSwaggerGen();             // habilita Swagger UI
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
+// Middleware
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();           // gera o swagger.json
-    app.UseSwaggerUI();         // habilita a interface do Swagger
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha API V1");
+        c.RoutePrefix = "swagger"; // agora abre em /swagger
+    });
 }
 
 app.UseHttpsRedirection();
 
+app.MapControllers(); // mapeia controllers como UsuarioController
+
+// Minimal API
 var summaries = new[]
 {
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"

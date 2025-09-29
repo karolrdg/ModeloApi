@@ -33,3 +33,4 @@ C:\Users\user\DIO - CSHARP\ModuloApi\obj\Debug\net9.0\ref\ModuloApi.dll
 C:\Users\user\DIO - CSHARP\ModuloApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user\DIO - CSHARP\ModuloApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user\DIO - CSHARP\ModuloApi\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user\DIO - CSHARP\ModuloApi\obj\Debug\net9.0\ModuloApi.sourcelink.json
