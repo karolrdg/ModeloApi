@@ -27,7 +27,7 @@ namespace ModuloApi.Controllers
         [HttpGet("apresentar/{nome}")]
         public IActionResult Apresentar(string nome)
         {
-            var msg = $"Olá, {nome}, seja bem-vindo!";
+            var msg = $"Olá, {nome}, seja bem-vindo(a)!";
             return Ok(new { Mensagem = msg });
         }
     }
